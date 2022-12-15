@@ -1,6 +1,9 @@
 {
-    "name": "Scary Beasties Unity GooglePlay Workflow",
+    "name": "Unity GooglePlay Workflow",
     "description": "Scary Beasties Unity workflow for building android-google play applications.",
+    "categories": [
+        "C#"
+    ],
     "filePatterns": [
         "/Assets"
     ]

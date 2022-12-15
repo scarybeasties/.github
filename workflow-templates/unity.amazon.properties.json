@@ -1,6 +1,9 @@
 {
-    "name": "Scary Beasties Unity Amazon Workflow",
+    "name": "Unity Amazon Workflow",
     "description": "Scary Beasties Unity workflow for building android-amazon applications.",
+    "categories": [
+        "C#"
+    ],
     "filePatterns": [
         "/Assets"
     ]

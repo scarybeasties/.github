@@ -1,6 +1,11 @@
 {
-    "name": "Scary Beasties HTML5 Game Production Workflow",
+    "name": "HTML5 Game Production Workflow",
     "description": "Scary Beasties production workflow for building HTML5 games.",
+    "categories": [
+        "TypeScript",
+        "JavaScript",
+        "npm"
+    ],
     "filePatterns": [
         "package.json$"
     ]

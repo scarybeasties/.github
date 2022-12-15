@@ -1,6 +1,9 @@
 {
-    "name": "Scary Beasties Unity iOS Workflow",
+    "name": "Unity iOS Workflow",
     "description": "Scary Beasties Unity workflow for building iOS applications.",
+    "categories": [
+        "C#"
+    ],
     "filePatterns": [
         "/Assets"
     ]
