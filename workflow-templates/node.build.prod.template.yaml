@@ -1,0 +1,21 @@
+name: Build Production
+
+on:
+  workflow_dispatch: 
+    inputs:
+      include_iframe:
+        description: 'Include iFrame'
+        type: boolean
+        default: false
+      deployment_directory:
+        description: 'Deployment Directory'
+        type: string
+        default: "clients/.../.../..."
+
+jobs:
+  build:
+    uses: scarybeasties/workflows/.github/workflows/node.build.prod.yml@main
+    with:
+      include_iframe: ${{ github.event.inputs.include_iframe }}
+      deployment_directory: ${{ github.event.inputs.deployment_directory }}
+    secrets: inherit
