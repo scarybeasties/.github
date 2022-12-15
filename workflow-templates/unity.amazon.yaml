@@ -1,0 +1,40 @@
+name: Amazon
+
+on:
+  workflow_dispatch: 
+    inputs:
+      development_build:
+        description: 'Development Build'
+        type: boolean
+        default: false
+      android_ndk_version:
+        description: 'Android NDK Version'
+        type: string
+        default: ""
+      bundle_id:
+        type: choice
+        description: 'Bundle ID to use'
+        options: 
+        - com.scarybeasties.BUNDLE_ID
+        - com.CLIENT.BUNDLE_ID
+      build_aab_bundle:
+        description: 'Build AAB Bundle'
+        type: boolean
+        default: false
+      destination:
+        description: 'Destination of build'
+        type: choice
+        options: 
+        - AppCenter
+        - Dropbox
+
+jobs:
+  build:
+    uses: scarybeasties/workflows/.github/workflows/sb.amazon.yml@main
+    with:
+      development_build: ${{ github.event.inputs.development_build }}
+      bundle_id: ${{ github.event.inputs.bundle_id }}
+      build_aab_bundle: ${{ github.event.inputs.build_aab_bundle }}
+      destination: ${{ github.event.inputs.destination }}
+      android_ndk_version: ${{ github.event.inputs.android_ndk_version }}
+    secrets: inherit

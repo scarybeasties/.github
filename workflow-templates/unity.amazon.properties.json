@@ -1,0 +1,7 @@
+{
+    "name": "Scary Beasties Unity Amazon Workflow",
+    "description": "Scary Beasties Unity workflow for building android-amazon applications.",
+    "filePatterns": [
+        "/Assets"
+    ]
+}

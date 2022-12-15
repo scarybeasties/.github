@@ -1,0 +1,31 @@
+name: iOS
+
+on:
+  workflow_dispatch: 
+    inputs:
+      development_build:
+        description: 'Development Build'
+        type: boolean
+        default: false
+      bundle_id:
+        type: choice
+        description: 'Bundle ID to use'
+        options: 
+        - com.scarybeasties.BUNDLE_ID
+        - com.CLIENT.BUNDLE_ID
+      destination:
+        description: 'Destination of build'
+        type: choice
+        options: 
+        - AppCenter
+        - SB TestFlight
+        - EOne TestFlight
+
+jobs:
+  build:
+    uses: scarybeasties/workflows/.github/workflows/sb.ios.yml@main
+    with:
+      development_build: ${{ github.event.inputs.development_build }}
+      bundle_id: ${{ github.event.inputs.bundle_id }}
+      destination: ${{ github.event.inputs.destination }}
+    secrets: inherit
