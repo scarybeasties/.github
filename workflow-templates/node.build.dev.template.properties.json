@@ -1,0 +1,7 @@
+{
+    "name": "Scary Beasties HTML5 Game Development Workflow",
+    "description": "Scary Beasties development workflow for building HTML5 games.",
+    "filePatterns": [
+        "package.json$"
+    ]
+}
