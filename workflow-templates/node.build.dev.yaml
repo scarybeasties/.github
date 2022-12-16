@@ -10,7 +10,7 @@ on:
       deployment_directory:
         description: 'Deployment Directory'
         type: string
-        default: "clients/.../.../..."
+        default: "CLIENT_NAME/BRAND/PROJECT_NAME/wip"
 
 jobs:
   build:
