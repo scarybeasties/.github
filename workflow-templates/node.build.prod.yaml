@@ -11,6 +11,10 @@ on:
         description: 'Deployment Directory'
         type: string
         default: "CLIENT_NAME/BRAND/PROJECT_NAME/prod"
+      build_language:
+        description: 'build_language'
+        type: string
+        default: "en"
 
 jobs:
   build:
@@ -18,4 +22,5 @@ jobs:
     with:
       include_iframe: ${{ github.event.inputs.include_iframe }}
       deployment_directory: ${{ github.event.inputs.deployment_directory }}
+      build_language: ${{ github.event.inputs.build_language }}
     secrets: inherit
